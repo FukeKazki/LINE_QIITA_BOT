@@ -2,10 +2,17 @@ import express from 'express'
 import * as line from '@line/bot-sdk'
 import crypto from 'crypto'
 import axios from 'axios'
-import {
-    config
-} from './setting'
+// import {
+//     config
+// } from './setting'
 
+// heroku上の環境変数の取得
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN
+const SECRET_KEY = process.env.SECRET_KEY
+const config = {
+    channelAccessToken: ACCESS_TOKEN,
+    channelSecret: SECRET_KEY,
+}
 const app = express()
 const client = new line.Client(config)
 const PORT = process.env.PORT || 3000
@@ -17,6 +24,7 @@ app.use(function (req, res, next) {
 })
 
 app.post('/webhook', line.middleware(config), async (req, res) => {
+    res.status(200).end()
     if (!validate_signature(req.headers['x-line-signature'], req.body)) return
     const replyToken = req.body.events[0].replyToken
     const messageText = req.body.events[0].message.text
