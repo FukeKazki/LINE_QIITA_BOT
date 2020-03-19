@@ -3,7 +3,7 @@
     <img src='images/qiita-line-bot.gif' />
 </p>
 
-!['タイトル'](https://qr-official.line.me/sid/L/035mpnrc.png)
+<p align='center'>QRコード: https://qr-official.line.me/sid/L/035mpnrc.png</p>
 
 ## Description
 LINE Messaging API × QIITA API で BOT の作成
