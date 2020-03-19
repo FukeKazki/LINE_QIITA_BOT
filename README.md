@@ -3,9 +3,7 @@
     <img src='images/qiita-line-bot.gif' />
 </p>
 
-<p align='center'>
-    <img src='https://qr-official.line.me/sid/L/035mpnrc.png' /> 
-</p>
+!['タイトル'](https://qr-official.line.me/sid/L/035mpnrc.png)
 
 ## Description
 LINE Messaging API × QIITA API で BOT の作成
